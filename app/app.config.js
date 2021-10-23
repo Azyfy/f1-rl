@@ -5,9 +5,9 @@ angular.
   config(['$routeProvider',
     function config($routeProvider) {
       $routeProvider.
-        when('/', {
-          template: '<f1-list></f1-list>'
+        when('/list/:year', {
+          template: '<f1-list-year></f1-list-year>'
         }).
-        otherwise('/');
+        otherwise('/list/2021');
     }
   ]);
