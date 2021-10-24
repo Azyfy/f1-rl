@@ -1,24 +1,25 @@
 
 <table>
-    <thead>
-      <tr><th >Driver Standings </th></tr>
-    </thead>
-    <tbody>
-        <tr> 
-            <td>#</td>
-            <td>Name</td>
-            <td>Contructor</td>
-            <td>Wins</td>
-            <td>Points</td>
+      <thead>
+        <tr><th >Driver Standings xD </th></tr>
+      </thead>
+      <tbody>
+          <tr> 
+              <td>#</td>
+              <td>Name</td>
+              <td>Contructors</td>
+              <td>Wins</td>
+              <td>Points</td>
+          </tr>
+      </tbody>
+      <tr ng-repeat="driver in $ctrl.driverStandings" >
+          <td> {{ driver.position }} </td>
+          <td>
+            {{ driver.Driver.givenName }} &nbsp; {{ driver.Driver.familyName }}
+          </td>
+          <td> {{ driver.Constructors[0].name }} </td>
+          <td> {{ driver.wins }} </td>
+          <td> {{ driver.points }} </td>
         </tr>
-    </tbody>
-    <tr ng-repeat="driver in $ctrl.driverStandings" >
-        <td> {{ driver.position }} </td>
-        <td>
-          {{ driver.Driver.givenName }} &nbsp; {{ driver.Driver.familyName }}
-        </td>
-        <td> {{ driver.Constructors[0].name }} </td>
-        <td> {{ driver.wins }} </td>
-        <td> {{ driver.points }} </td>
-      </tr>
-  </table>
+</table>
+<p> {{ $ctrl.errorMessage }} </p>
