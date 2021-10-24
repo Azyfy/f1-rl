@@ -14,7 +14,12 @@ angular.
             $http.get("https://ergast.com/api/f1/" + self.year + "/driverStandings.json")
                 .then(response => {
                     self.driverStandings = response.data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
+
                     console.log("DATA",response.data.MRData.StandingsTable.StandingsLists[0].DriverStandings)
+                })
+                .catch(err => {
+                    console.log("Error", err)
+                    self.errorMessage = "Error fetching data";
                 });
         }]
     });
