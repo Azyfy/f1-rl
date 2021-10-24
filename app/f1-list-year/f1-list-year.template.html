@@ -14,7 +14,7 @@
       </tbody>
       <tr ng-repeat="driver in $ctrl.driverStandings | filter: $ctrl.searchFilter" >
           <td> {{ driver.position }} </td>
-          <td>
+          <td ng-click="$ctrl.pickDriver(driver.Driver)" >
             {{ driver.Driver.givenName }} &nbsp; {{ driver.Driver.familyName }}
           </td>
           <td> {{ driver.Constructors[0].name }} </td>
@@ -23,3 +23,7 @@
         </tr>
 </table>
 <p> {{ $ctrl.errorMessage }} </p>
+
+<button ng-click="$ctrl.pickDriver()" > TEST </button>
+
+<f1-driver-detail data="$ctrl.driverDetails" ></f1-driver-detail>
