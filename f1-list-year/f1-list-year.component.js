@@ -13,6 +13,11 @@ angular.
 
             self.searchFilter = "";
 
+            self.pickDriver = (driverData) => {
+                    console.log(driverData)
+                    self.driverDetails = driverData;
+            };
+
             $http.get("https://ergast.com/api/f1/" + self.year + "/driverStandings.json")
                 .then(response => {
                     self.driverStandings = response.data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
