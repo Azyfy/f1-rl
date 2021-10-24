@@ -11,6 +11,8 @@ angular.
 
             self.year = $routeParams.year;
 
+            self.searchFilter = "";
+
             $http.get("https://ergast.com/api/f1/" + self.year + "/driverStandings.json")
                 .then(response => {
                     self.driverStandings = response.data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
