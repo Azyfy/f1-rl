@@ -5,7 +5,7 @@ angular.
   config(['$routeProvider',
     function config($routeProvider) {
       $routeProvider.
-        when('/list/driver-standings/', {
+        when('/', {
           redirectTo:'/list/driver-standings/' + new Date().getFullYear()
         }).
         when('/list/driver-standings/:year', {
@@ -16,9 +16,6 @@ angular.
         }).
         when('/list/results/race/:year/:round', {
           template: '<f1-single-race-results></f1-single-race-results>'
-        }).
-        when('/list/schedule/', {
-          redirectTo:'/list/schedule/' + new Date().getFullYear()
         }).
         when('/list/schedule/:year/', {
           template: '<f1-race-schedule></f1-race-schedule>'
