@@ -7,7 +7,7 @@ angular.
         controller: function F1ListController($location) {
             console.log("F1 list log")
 
-            this.yearProp = "2021";
+            this.yearProp = new Date().getFullYear();
 
             this.onChange = function () {
                 $location.path('/list/' + this.yearProp);
@@ -15,8 +15,8 @@ angular.
             
 
             this.yearSpan = [];
-            for(let i = 2021; i >= 1950; i--) {
-                this.yearSpan.push(i)
+            for(let i = this.yearProp; i >= 1950; i--) {
+                this.yearSpan.push(i);
             }
 
         }
