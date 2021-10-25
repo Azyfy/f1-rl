@@ -1,5 +1,6 @@
 "use strict";
 
 angular.module("f1SingleRaceResults", [
-    "ngRoute"
+    "ngRoute",
+    "f1DriverDetail"
 ]);
