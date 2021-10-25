@@ -16,6 +16,7 @@
               <td>Circuit Name</td>
               <td>Locality</td>
               <td>Country</td>
+              <td>Results</td>
           </tr>
       </tbody>
       <tr ng-repeat="race in $ctrl.races" >
@@ -28,6 +29,7 @@
           <td> {{ race.Circuit.circuitName }} </td>
           <td> {{ race.Circuit.Location.locality }} </td>
           <td> {{ race.Circuit.Location.country }} </td>
+          <td> <a ng-href="#!/list/results/race/{{$ctrl.year}}/{{race.round}}"> Result </a> </td>
 
         </tr>
   </table>

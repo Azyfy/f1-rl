@@ -6,5 +6,6 @@ angular.module('myApp', [
   'f1ListYear',
   'f1DriverDetail',
   'f1SingleDriverResults',
-  'f1RaceSchedule'
+  'f1RaceSchedule',
+  'f1SingleRaceResults'
 ]);
