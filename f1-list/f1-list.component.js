@@ -10,7 +10,13 @@ angular.
             this.yearProp = new Date().getFullYear();
 
             this.onChange = function () {
-                $location.path('/list/' + this.yearProp);
+                console.log("P", $location.path())
+                if($location.path().includes("some value")) {
+                    $location.path('/list/some value/' + this.yearProp);
+                }
+                else {
+                    $location.path('/list/driver-standings/' + this.yearProp);
+                }
             }
             
 
