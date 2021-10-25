@@ -23,7 +23,7 @@
       </tbody>
       <tr ng-repeat="result in $ctrl.race.Results" >
             <td> {{ result.position }} </td>
-            <td> {{ result.Driver.givenName }} {{ result.Driver.fullname }} </td>
+            <td ng-click="$ctrl.pickDriver(result.Driver)" > {{ result.Driver.givenName }} {{ result.Driver.familyName }} </td>
             <td> {{ result.Constructor.name }} </td>
             <td> {{ result.Time.time }} </td>
             <td> {{ result.grid }} </td>
@@ -34,5 +34,7 @@
 
         </tr>
   </table>
+
+  <f1-driver-detail data="$ctrl.driverDetails" ></f1-driver-detail>
   
   <p> {{ $ctrl.errorMessage }} </p>

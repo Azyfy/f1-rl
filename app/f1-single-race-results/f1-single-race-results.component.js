@@ -14,6 +14,11 @@ angular.
             console.log("THIS", this.year)
             console.log("THIS", this.round)
 
+            self.pickDriver = (driverData) => {
+                console.log(driverData)
+                self.driverDetails = driverData;
+            };
+
             $http.get("https://ergast.com/api/f1/" + self.year + "/" + self.round + "/results.json")
                 .then(response => {
                     console.log("DATA RACE",response.data.MRData.RaceTable.Races[0]);
