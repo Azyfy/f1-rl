@@ -11,8 +11,8 @@ angular.
 
             this.onChange = function () {
                 console.log("P", $location.path())
-                if($location.path().includes("some value")) {
-                    $location.path('/list/some value/' + this.yearProp);
+                if($location.path().includes("schedule")) {
+                    $location.path('/list/schedule/' + this.yearProp);
                 }
                 else {
                     $location.path('/list/driver-standings/' + this.yearProp);
