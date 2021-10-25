@@ -1,4 +1,9 @@
-<table>
+<div ng-if="!$ctrl.races" class="spinner">
+  <div class="dot1"></div>
+  <div class="dot2"></div>
+</div>
+
+<table ng-if="$ctrl.races" >
     <thead>
       <tr><th > {{ $ctrl.year }} {{ $ctrl.driver.givenName }} {{ $ctrl.driver.familyName }} Results </th></tr>
     </thead>

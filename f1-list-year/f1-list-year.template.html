@@ -1,5 +1,12 @@
-<input type="text" ng-model="$ctrl.searchFilter" placeholder="Search" >
-<table>
+
+<div ng-if="!$ctrl.driverStandings" class="spinner">
+  <div class="dot1"></div>
+  <div class="dot2"></div>
+</div>
+
+<input ng-if="$ctrl.driverStandings" type="text" ng-model="$ctrl.searchFilter" placeholder="Search" >
+
+<table ng-if="$ctrl.driverStandings" >
       <thead>
         <tr><th >Driver Standings {{ $ctrl.year }} </th></tr>
       </thead>
