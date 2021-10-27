@@ -1,13 +1,25 @@
-<ul class="menu">
-    <li><a ng-href="#!/list/driver-standings/{{$ctrl.yearProp}}"  >Driver Standings</a></li>
-    <li><a ng-href="#!/list/schedule/{{$ctrl.yearProp}}" >Race Schedule</a></li>
-  </ul>
+<div class="head" >
+    <h1> Formula 1 </h1>
 
+    <nav class="nav" >
+        <img src="core/svg/flag1.svg" alt="race-flag" class="race-flag">
+        <a ng-href="#!/list/driver-standings/{{$ctrl.yearProp}}"  >Driver Standings</a>
+        <img src="core/svg/flag2.svg" alt="race-flag" class="race-flag">
+        <a ng-href="#!/list/schedule/{{$ctrl.yearProp}}" >Race Schedule</a>
+        <img src="core/svg/flag1.svg" alt="race-flag" class="race-flag">
+    </nav>
+</div>
 
-<h1> F1 list </h1>
+<i class="fas fa-flag-checkered"></i>
 
-<select ng-model="$ctrl.yearProp"  ng-change="$ctrl.onChange()" >
-    <option ng-repeat = "year in $ctrl.yearSpan" value="{{ year }}" > {{  year }} </option>
-</select>
+<i class="fas fa-filter"></i>
+<i class="fas fa-sort"></i>
+
+<div>
+    <span> Year for <em>driver standings</em>  / <em>race schedule</em>: </span>
+    <select ng-model="$ctrl.yearProp"  ng-change="$ctrl.onChange()" >
+        <option ng-repeat = "year in $ctrl.yearSpan" value="{{ year }}" > {{  year }} </option>
+    </select>
+</div>
 
 <div ng-view></div>

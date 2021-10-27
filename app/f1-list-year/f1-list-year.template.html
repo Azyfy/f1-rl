@@ -4,31 +4,46 @@
   <div class="dot2"></div>
 </div>
 
-<input ng-if="$ctrl.driverStandings" type="text" ng-model="$ctrl.searchFilter" placeholder="Search" >
+<div  ng-if="$ctrl.driverStandings" >
 
-<table ng-if="$ctrl.driverStandings" >
-      <thead>
-        <tr><th >Driver Standings {{ $ctrl.year }} </th></tr>
-      </thead>
-      <tbody>
-          <tr> 
-              <td>#</td>
+  <div class="search" >
+    <input type="text" ng-model="$ctrl.searchFilter" placeholder="Search" >
+    <i class="fas fa-search"></i>
+  </div>
+
+  <div class="container-dt" >
+
+    <table>
+          <thead>
+            <tr>
+              <th colspan="5" >Driver Standings {{ $ctrl.year }} </th>
+            </tr>
+
+            <tr> 
+              <td>Position</td>
               <td>Name</td>
               <td>Contructors</td>
               <td>Wins</td>
               <td>Points</td>
-          </tr>
-      </tbody>
-      <tr ng-repeat="driver in $ctrl.driverStandings | filter: $ctrl.searchFilter" >
-          <td> {{ driver.position }} </td>
-          <td ng-click="$ctrl.pickDriver(driver.Driver)" >
-            {{ driver.Driver.givenName }} &nbsp; {{ driver.Driver.familyName }}
-          </td>
-          <td> {{ driver.Constructors[0].name }} </td>
-          <td> {{ driver.wins }} </td>
-          <td> {{ driver.points }} </td>
-        </tr>
-</table>
-<p> {{ $ctrl.errorMessage }} </p>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="driver in $ctrl.driverStandings | filter: $ctrl.searchFilter" ng-click="$ctrl.pickDriver(driver.Driver)" class="tr-link" >
+              <td> {{ driver.position }} </td>
+              <td>
+                {{ driver.Driver.givenName }} &nbsp; {{ driver.Driver.familyName }}
+              </td>
+              <td> {{ driver.Constructors[0].name }} </td>
+              <td> {{ driver.wins }} </td>
+              <td> {{ driver.points }} </td>
+            </tr>
+          </tbody>
+    </table>
 
-<f1-driver-detail data="$ctrl.driverDetails" ></f1-driver-detail>
+    <p> {{ $ctrl.errorMessage }} </p>
+
+    <f1-driver-detail data="$ctrl.driverDetails" ></f1-driver-detail>
+
+  </div>
+
+</div>
