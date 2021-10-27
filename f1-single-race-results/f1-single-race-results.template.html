@@ -2,39 +2,50 @@
     <div class="dot1"></div>
     <div class="dot2"></div>
 </div>
-  
-  <table ng-if="$ctrl.race" >
-      <thead>
-        <tr><th > {{ $ctrl.year }} {{ $ctrl.race.raceName }} ({{ $ctrl.race.Circuit.circuitName }}) Race Result </th></tr>
-      </thead>
-      <tbody>
-          <tr> 
-                <td>Position</td>
-                <td>Driver</td>
-                <td>Constructor</td>
-                <td>Time</td>
-                <td>Grid</td>
-                <td>Laps</td>
-                <td>Number</td>
-                <td>Points</td>
-                <td>Status</td>
 
-          </tr>
-      </tbody>
-      <tr ng-repeat="result in $ctrl.race.Results" >
-            <td> {{ result.position }} </td>
-            <td ng-click="$ctrl.pickDriver(result.Driver)" > {{ result.Driver.givenName }} {{ result.Driver.familyName }} </td>
-            <td> {{ result.Constructor.name }} </td>
-            <td> {{ result.Time.time }} </td>
-            <td> {{ result.grid }} </td>
-            <td> {{ result.laps }} </td>
-            <td> {{ result.number }} </td>
-            <td> {{ result.points }} </td>
-            <td> {{ result.status }} </td>
+<div ng-if="$ctrl.race" >
 
+  <div class="container-dt" >
+
+    <table >
+      <thead  >
+        <tr >
+          <th colspan="9" > {{ $ctrl.year }} {{ $ctrl.race.raceName }} ({{ $ctrl.race.Circuit.circuitName }}) Race Result </th>
         </tr>
-  </table>
+        <tr> 
+          <td>Position</td>
+          <td>Driver</td>
+          <td>Constructor</td>
+          <td>Time</td>
+          <td>Grid</td>
+          <td>Laps</td>
+          <td>Number</td>
+          <td>Points</td>
+          <td>Status</td>
+        </tr>
+      </thead>
 
-  <f1-driver-detail data="$ctrl.driverDetails" ></f1-driver-detail>
+      <tbody>
+
+        <tr ng-repeat="result in $ctrl.race.Results" ng-click="$ctrl.pickDriver(result.Driver)" class="tr-link" >
+          <td> {{ result.position }} </td>
+          <td> {{ result.Driver.givenName }} {{ result.Driver.familyName }} </td>
+          <td> {{ result.Constructor.name }} </td>
+          <td> {{ result.Time.time }} </td>
+          <td> {{ result.grid }} </td>
+          <td> {{ result.laps }} </td>
+          <td> {{ result.number }} </td>
+          <td> {{ result.points }} </td>
+          <td> {{ result.status }} </td>
+        </tr>
+    
+      </tbody>
+    </table>
+
+    <f1-driver-detail data="$ctrl.driverDetails" ></f1-driver-detail>
+    
+    <p> {{ $ctrl.errorMessage }} </p>
+  </div>
+
+</div>
   
-  <p> {{ $ctrl.errorMessage }} </p>

@@ -3,32 +3,34 @@
   <div class="dot2"></div>
 </div>
 
-<table ng-if="$ctrl.races" >
+<div class="container-dt" >
+
+  <table ng-if="$ctrl.races" >
     <thead>
-      <tr><th > {{ $ctrl.year }} {{ $ctrl.driver.givenName }} {{ $ctrl.driver.familyName }} Results </th></tr>
+      <tr>
+        <th colspan="10" > {{ $ctrl.year }} {{ $ctrl.driver.givenName }} {{ $ctrl.driver.familyName }} Results </th>
+      </tr>
+
+      <tr> 
+        <td>Round</td>
+        <td>Race Name</td>
+        <td>Date</td>
+        <td>Country</td>
+        <td>Grid</td>
+        <td>Laps</td>
+        <td>Number</td>
+        <td>Points</td>
+        <td>Status</td>
+        <td>Position</td>
+    </tr>
     </thead>
     <tbody>
-        <tr> 
-            <td>Round</td>
-            <td>Race Name</td>
-            <td>Date</td>
-            <td>Circuit Name</td>
-            <td>Country</td>
-            <td>Grid</td>
-            <td>Laps</td>
-            <td>Number</td>
-            <td>Points</td>
-            <td>Status</td>
-            <td>Position</td>
-        </tr>
-    </tbody>
-    <tr ng-repeat="race in $ctrl.races" >
+      <tr ng-repeat="race in $ctrl.races" >
         <td> {{ race.round }} </td>
         <td>
           {{ race.raceName }}
         </td>
         <td> {{ race.date }} </td>
-        <td> {{ race.Circuit.circuitName }} </td>
         <td> {{ race.Circuit.Location.country }} </td>
         <td> {{ race.Results[0].grid }} </td>
         <td> {{ race.Results[0].laps }} </td>
@@ -37,6 +39,9 @@
         <td> {{ race.Results[0].status }} </td>
         <td> {{ race.Results[0].position }} </td>
       </tr>
-</table>
+    </tbody>
+  </table>
+
+</div>
 
 <p> {{ $ctrl.errorMessage }} </p>
