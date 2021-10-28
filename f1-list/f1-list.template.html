@@ -14,6 +14,7 @@
 
     <p>Data for the Formula One series, from the beginning of the world championships in 1950.</p>
 
+    <p class="note" > <em> Note: Initial data is based on the current year, if there is no data it will just stay at loading and an error might be thrown. Just change the year below. </em> </p>
     <span> Year for <em>driver standings</em>  / <em>race schedule</em>: </span>
     <select ng-model="$ctrl.yearProp"  ng-change="$ctrl.onChange()" >
         <option ng-repeat = "year in $ctrl.yearSpan" value="{{ year }}" > {{  year }} </option>

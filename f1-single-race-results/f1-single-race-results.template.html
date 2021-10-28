@@ -51,8 +51,11 @@
 
     <f1-driver-detail data="$ctrl.driverDetails" ></f1-driver-detail>
     
-    <p> {{ $ctrl.errorMessage }} </p>
   </div>
 
+</div>
+
+<div ng-if="$ctrl.errorMessage" class="error-cont" >
+  <p> {{ $ctrl.errorMessage }} </p>
 </div>
   
