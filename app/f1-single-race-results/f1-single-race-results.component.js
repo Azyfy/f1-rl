@@ -8,6 +8,8 @@ angular.
             console.log("F1 race results")
             let self = this;
 
+            self.searchFilter = "";
+
             self.year = $routeParams.year;
             self.round = $routeParams.round;
 

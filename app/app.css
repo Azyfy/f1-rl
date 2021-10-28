@@ -1,27 +1,5 @@
-/* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
-}
-
-.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
-}
-
-.menu > li {
-  display: inline;
-}
-
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+:root {
+  --theme: #a80022;
 }
 
 /* spinner */
@@ -43,7 +21,7 @@
   display: inline-block;
   position: absolute;
   top: 0;
-  background-color: #333;
+  background-color: var(--theme);
   border-radius: 100%;
   
   -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
@@ -98,7 +76,7 @@ td {
 }
 
 tbody tr:hover {
-  color: #a80022;
+  color: var(--theme);
 }
 
 tr:nth-child(even) {
@@ -107,6 +85,7 @@ tr:nth-child(even) {
 
 th {
   height: 75px;
+  font-weight: bold;
 }
 
 thead > tr:last-child {
@@ -117,7 +96,7 @@ thead > tr:last-child {
 /* header */
 
 .head {
-  background-color: #a80022;
+  background-color: var(--theme);
   border-bottom: 10px double black;
   padding: 25px 0;
 }
@@ -144,7 +123,7 @@ thead > tr:last-child {
   text-decoration: underline;
 }
 
-/*  driver details */
+/*  driver details and containers */
 
 .container-dt {
   position: relative;
@@ -159,7 +138,7 @@ thead > tr:last-child {
   width: 250px;
   height: 100%;
   box-sizing: border-box;
-  background-color: #a80022;
+  background-color: var(--theme);
   border-top: 5px double black;
   border-right: 5px double black;
   border-bottom: 5px double black;
@@ -173,6 +152,18 @@ thead > tr:last-child {
 .container-dd a {
   color: white;
 }
+
+.option-con {
+  display: flex;
+  justify-content: center;
+}
+
+.f1 {
+  text-align: center;
+  padding: 25px 10px;
+}
+
+/*  */
 
 .d-name {
   font-weight: bolder;

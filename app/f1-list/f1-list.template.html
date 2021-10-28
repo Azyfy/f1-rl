@@ -10,12 +10,10 @@
     </nav>
 </div>
 
-<i class="fas fa-flag-checkered"></i>
+<div class="f1" >
 
-<i class="fas fa-filter"></i>
-<i class="fas fa-sort"></i>
+    <p>Data for the Formula One series, from the beginning of the world championships in 1950.</p>
 
-<div>
     <span> Year for <em>driver standings</em>  / <em>race schedule</em>: </span>
     <select ng-model="$ctrl.yearProp"  ng-change="$ctrl.onChange()" >
         <option ng-repeat = "year in $ctrl.yearSpan" value="{{ year }}" > {{  year }} </option>
