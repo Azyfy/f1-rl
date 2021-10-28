@@ -42,10 +42,12 @@
           </tbody>
     </table>
 
-    <p> {{ $ctrl.errorMessage }} </p>
-
     <f1-driver-detail data="$ctrl.driverDetails" ></f1-driver-detail>
 
   </div>
 
+</div>
+
+<div ng-if="$ctrl.errorMessage" class="error-cont" >
+  <p> {{ $ctrl.errorMessage }} </p>
 </div>

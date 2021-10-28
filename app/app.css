@@ -163,6 +163,14 @@ thead > tr:last-child {
   padding: 25px 10px;
 }
 
+.error-cont {
+  border: 2px dotted var(--theme);
+  margin: 0 10px;
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+
 /*  */
 
 .d-name {
@@ -197,4 +205,8 @@ thead > tr:last-child {
 
 .search > input:focus {
   outline: none;
+}
+
+.note {
+  font-size: smaller;
 }
