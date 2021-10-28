@@ -7,7 +7,7 @@
         <p class = "d-name" > {{ $ctrl.data.givenName }} {{ $ctrl.data.familyName }} </p>
         <p>Born {{ $ctrl.data.dateOfBirth }} </p>
         <p>Nationality {{ $ctrl.data.nationality }} </p>
-        <p> <a ng-href="#!/list/results/driver/{{$ctrl.year}}/{{$ctrl.data.driverId}}"> {{ $ctrl.year }} Results</a> </p>
+        <p> <a ng-href="#!/list/results/driver/{{$ctrl.year}}/{{$ctrl.data.driverId}}"> <i class="fas fa-flag-checkered"></i> {{ $ctrl.year }} Results</a> </p>
         <p>Wiki <a ng-href="{{$ctrl.data.url}}" target="_blank" > <i class="fas fa-external-link-alt"></i> </a> </p>
     </div>
 </div>

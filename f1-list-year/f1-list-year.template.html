@@ -6,10 +6,12 @@
 
 <div  ng-if="$ctrl.driverStandings" >
 
-  <div class="search" >
-    <input type="text" ng-model="$ctrl.searchFilter" placeholder="Search" >
-    <i class="fas fa-search"></i>
-  </div>
+  <div class="option-con" >
+    <div class="search" >
+      <input type="text" ng-model="$ctrl.searchFilter" placeholder="Search" >
+        <i class="fas fa-search"></i>
+      </div>
+    </div>
 
   <div class="container-dt" >
 
@@ -28,7 +30,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr ng-repeat="driver in $ctrl.driverStandings | filter: $ctrl.searchFilter" ng-click="$ctrl.pickDriver(driver.Driver)" class="tr-link" >
+            <tr ng-repeat="driver in $ctrl.driverStandings | filter: $ctrl.searchFilter " ng-click="$ctrl.pickDriver(driver.Driver)" class="tr-link" >
               <td> {{ driver.position }} </td>
               <td>
                 {{ driver.Driver.givenName }} &nbsp; {{ driver.Driver.familyName }}
