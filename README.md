@@ -1,4 +1,28 @@
-# `angular-seed` — the seed for AngularJS apps
+# Formula 1 results
+
+Formula 1 data display from the [ergast API](http://ergast.com) which provides a historical record of motor racing data for non-commercial purposes.
+The API provides data for the Formula One series, from the beginning of the world championships in 1950.
+
+[Link](https://azzryel.github.io/f1-rl/)
+
+###### Features
+* Tabular data display for 
+  * driver standings
+  * race schedules
+  * driver details
+  * driver results
+  * race results
+
+###### Tools
+- AngularJS
+
+###### Screenshot(s)
+
+![Screenshot from 2021-10-29 18-13-52](https://user-images.githubusercontent.com/25674257/139470626-e9f72162-f7da-431b-87c3-08c89e96c140.png)
+
+
+____________________________________________________________________________________________________________________________________________________________
+### `angular-seed` — the seed for AngularJS apps
 
 This project is an application skeleton for a typical [AngularJS][angularjs] web app. You can use it
 to quickly bootstrap your angular webapp projects and dev environment for these projects.
@@ -9,18 +33,18 @@ framework and a bunch of development and testing tools for instant web developme
 The seed app doesn't do much, just shows how to wire two controllers and views together.
 
 
-## Getting Started
+#### Getting Started
 
 To get you started you can simply clone the `angular-seed` repository and install the dependencies:
 
-### Prerequisites
+##### Prerequisites
 
 You need git to clone the `angular-seed` repository. You can get git from [here][git].
 
 We also use a number of Node.js tools to initialize and test `angular-seed`. You must have Node.js
 and its package manager (npm) installed. You can get them from [here][node].
 
-### Clone `angular-seed`
+##### Clone `angular-seed`
 
 Clone the `angular-seed` repository using git:
 
@@ -37,7 +61,7 @@ git clone --depth=1 https://github.com/angular/angular-seed.git <your-project-na
 
 The `depth=1` tells git to only pull down one commit worth of historical data.
 
-### Install Dependencies
+##### Install Dependencies
 
 We have two kinds of dependencies in this project: tools and AngularJS framework code. The tools
 help us manage and test the application.
@@ -64,7 +88,7 @@ your project.
 *Note copying the AngularJS files from `node_modules` to `app/lib` makes it easier to serve the
 files by a web server.*
 
-### Run the Application
+##### Run the Application
 
 We have preconfigured the project with a simple development web server. The simplest way to start
 this server is:
@@ -76,7 +100,7 @@ npm start
 Now browse to the app at [`localhost:8000/index.html`][local-app-url].
 
 
-## Directory Layout
+#### Directory Layout
 
 ```
 app/                  --> all of the source files for the application
@@ -109,11 +133,11 @@ package-lock.json     --> Npm specific metadata, including versions of installed
 ```
 
 
-## Testing
+#### Testing
 
 There are two kinds of tests in the `angular-seed` application: Unit tests and end-to-end tests.
 
-### Running Unit Tests
+##### Running Unit Tests
 
 The `angular-seed` app comes preconfigured with unit tests. These are written in [Jasmine][jasmine],
 which we run with the [Karma][karma] test runner. We provide a Karma configuration file to run them.
@@ -144,7 +168,7 @@ npm run test-single-run
 
 
 <a name="e2e-testing"></a>
-### Running End-to-End Tests
+##### Running End-to-End Tests
 
 The `angular-seed` app comes with end-to-end tests, again written in [Jasmine][jasmine]. These tests
 are run with the [Protractor][protractor] End-to-End test runner. It uses native events and has
@@ -190,7 +214,7 @@ the [Java Development Kit (JDK)][jdk] to be installed on your local machine. Che
 If JDK is not already installed, you can download it [here][jdk-download].
 
 
-## Updating AngularJS and other dependencies
+#### Updating AngularJS and other dependencies
 
 Since the AngularJS framework library code and tools are acquired through package managers (e.g.
 npm) you can use these tools to easily update the dependencies. Simply run the preconfigured script:
@@ -206,7 +230,7 @@ If you want to update a dependency to a version newer than what the specificed r
 you can change the version range in `package.json` and then run `npm run update-deps` as usual.
 
 
-## Loading AngularJS Asynchronously
+#### Loading AngularJS Asynchronously
 
 The `angular-seed` project supports loading the framework and application scripts asynchronously.
 The special `index-async.html` is designed to support this style of loading. For it to work you must
@@ -221,7 +245,7 @@ This will copy the contents of the `angular-loader.js` library file into the `in
 page. You can run this every time you update the version of AngularJS that you are using.
 
 
-## Serving the Application Files
+#### Serving the Application Files
 
 While AngularJS is client-side-only technology and it is possible to create AngularJS web apps that
 do not require a backend server at all, we recommend serving the project files using a local
@@ -229,7 +253,7 @@ web server during development to avoid issues with security restrictions (sandbo
 sandbox implementation varies between browsers, but quite often prevents things like cookies, XHR,
 etc to function properly when an HTML page is opened via the `file://` scheme instead of `http://`.
 
-### Running the App during Development
+##### Running the App during Development
 
 The `angular-seed` project comes preconfigured with a local development web server. It is a Node.js
 tool called [http-server][http-server]. You can start this web server with `npm start`, but you may
@@ -248,7 +272,7 @@ http-server -a localhost -p 8000
 Alternatively, you can choose to configure your own web server, such as Apache or Nginx. Just
 configure your server to serve the files under the `app/` directory.
 
-### Running the App in Production
+##### Running the App in Production
 
 This really depends on how complex your app is and the overall infrastructure of your system, but
 the general rule is that all you need in production are the files under the `app/` directory.
@@ -263,9 +287,9 @@ applicable. Usually this is done by hosting the files by the backend server or t
 reverse-proxying the backend server(s) and web server(s).
 
 
-## Continuous Integration
+#### Continuous Integration
 
-### Travis CI
+##### Travis CI
 
 [Travis CI][travis] is a continuous integration service, which can monitor GitHub for new commits to
 your repository and execute scripts such as building the app or running tests. The `angular-seed`
@@ -276,7 +300,7 @@ You will need to enable the integration between Travis and GitHub. See the
 [Travis website][travis-docs] for instructions on how to do this.
 
 
-## Contact
+#### Contact
 
 For more information on AngularJS please check out [angularjs.org][angularjs].
 
