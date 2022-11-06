@@ -3,7 +3,7 @@
 Formula 1 data display from the [ergast API](http://ergast.com) which provides a historical record of motor racing data for non-commercial purposes.
 The API provides data for the Formula One series, from the beginning of the world championships in 1950.
 
-[Link](https://azzryel.github.io/f1-rl/)
+[Link](https://azyfy.github.io/f1-rl/)
 
 ###### Features
 * Tabular data display for 
